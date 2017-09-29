@@ -3,61 +3,67 @@ This file describes how to configure a Flask App on a Ubuntu machine, hosted on 
 
 ## Overview
 ### Server info
-IP: 18.221.185.248
-URL: udacity-linux.mittcoats.com
+⋅⋅⋅__IP:__ [18.221.185.248]
+⋅⋅⋅__URL:__ [udacity-linux.mittcoats.com]
 
 ### Software Installed
-LightSail
-SSH
-UFW
-Git
-Flask
-PostgreSQL
-Apache
-WSGI
+* LightSail
+* SSH
+* UFW
+* Git
+* Flask
+* PostgreSQL
+* Apache
+* WSGI
 
 ## Server Configuration
 ### Users
 __Add grader user__
-`sudo adduser grader`
-Created password: "grader"
+- `sudo adduser grader`
+- Created password: "grader"
+
 
 __Add grader to sudoers__
 Create sudoers file for grader
-`touch /etc/sudoers.d/grader`
+- `touch /etc/sudoers.d/grader`
+
 Open file and add following grant grader sudo powers
-`nano /etc/sudoers.d/grader`
-`grader ALL=(ALL) NOPASSWD:ALL`
+- `nano /etc/sudoers.d/grader`
+- `grader ALL=(ALL) NOPASSWD:ALL`
 
 ### Security
 __Firewall__
 
 __Key-based SSH__
 Create a new set us keys on local machine
-`ssh-keygen`
+- `ssh-keygen`
 
 Return to server, logged in as grader
-`su - grader`
+- `su - grader`
+
 Add directory for keys
-`mkdir .ssh`
+- `mkdir .ssh`
+
 Update change permissions to 700 to allow writing
-`chmod 700 .ssh`
+- `chmod 700 .ssh`
+
 Paste public key from local machine `.ssh` directory (example_key.pub) in "authorized_keys" file.
-`nano .ssh/authorized_keys`
+- `nano .ssh/authorized_keys`
+
 Update permission to prevent changes to keys
-`chmod 644 .ssh/authorized_keys`
+- `chmod 644 .ssh/authorized_keys`
 
 Restart ssh service
 `sudo service ssh restart`
 
 __Update timezone UTC__
 Configure the local timezone to UTC
-`sudo dpkg-reconfigure tzdata`
-Then set location to "none of the above"; Then select UTC and hit ok
+- `sudo dpkg-reconfigure tzdata`
+- Then set location to "none of the above"; Then select UTC and hit ok
 
 __Update system packages__
-`sudo apt-get update`
-`sudo apt-get upgrade`
+- `sudo apt-get update`
+- `sudo apt-get upgrade`
 
 
 __Host SSH on non-default port__
@@ -65,18 +71,21 @@ __Host SSH on non-default port__
 ### App
 __Web server at port 80__
 Install Apache2
-`sudo apt-get install apache2`
+- `sudo apt-get install apache2`
+
 Install python
-`sudo apt-get install python3`
-`sudo apt-get install python3-setuptools`
+- `sudo apt-get install python`
+- `sudo apt-get install python-setuptools`
+
 Install mod_wsgi package
-`sudo apt-get install apache2 libapache2-mod-wsgi-py3`
+- `sudo apt-get install apache2 libapache2-mod-wsgi
+
 Start apache server
 `sudo service apache2 restart`
 
 __Database server configuration__
 Install PostgreSQL
-`sudo apt-get install postgresql`
+- `sudo apt-get install postgresql`
 
 Create database for store
 `sudo -u postgres psql`
