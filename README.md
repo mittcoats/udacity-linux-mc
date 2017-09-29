@@ -5,7 +5,7 @@ This file describes how to configure a Flask App on a Ubuntu machine, hosted on 
 ### Server info
 __IP:__ [18.221.185.248]
 
-__URL:__ [udacity-linux.mittcoats.com]
+__URL:__ [udacity-linux-link]
 
 ### Software Installed
 * LightSail
@@ -155,3 +155,5 @@ Check for server errors...
 - https://github.com/aviaryan/flask-postgres-apache-server
 - https://github.com/kongling893/Linux-Server-Configuration-UDACITY
 - https://github.com/sharkwhistle/Udacity-FSND-Linux-Server-Configuration
+
+[udacity-linux-link]: http://www.udacity-linux.mittcoats.com
