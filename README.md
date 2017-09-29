@@ -3,8 +3,9 @@ This file describes how to configure a Flask App on a Ubuntu machine, hosted on 
 
 ## Overview
 ### Server info
-⋅⋅⋅ __IP:__ [18.221.185.248]
-⋅⋅⋅ __URL:__ [udacity-linux.mittcoats.com]
+__IP:__ [18.221.185.248]
+
+__URL:__ [udacity-linux.mittcoats.com]
 
 ### Software Installed
 * LightSail
