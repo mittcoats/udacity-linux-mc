@@ -78,33 +78,33 @@ Install python
 - `sudo apt-get install python-setuptools`
 
 Install mod_wsgi package
-- `sudo apt-get install apache2 libapache2-mod-wsgi
+- `sudo apt-get install apache2 libapache2-mod-wsgi`
 
 Start apache server
-`sudo service apache2 restart`
+- `sudo service apache2 restart`
 
 __Database server configuration__
 Install PostgreSQL
 - `sudo apt-get install postgresql`
 
 Create database for store
-`sudo -u postgres psql`
+- `sudo -u postgres psql`
 
 Create database with admin user
-`create user admin with password 'admin'`
-`create database store with owner admin`
+- `create user admin with password 'admin'`
+- `create database store with owner admin`
 
 __Serve Flask App, "Item Catalogue" as WSGI App__
 Install git
-`sudo apt-get install git`
+- `sudo apt-get install git`
 
 Create new directory for store app and clone git repo
-`cd /var/www`
-`sudo git clone https://github.com/mittcoats/mittcoatshouse.git store`
+- `cd /var/www`
+- `sudo git clone https://github.com/mittcoats/mittcoatshouse.git store`
 
 Create config file using Apache and mod_wsgi
-`sudo nano /etc/apache2/sites-available/store.conf`
-```
+- `sudo nano /etc/apache2/sites-available/store.conf`
+- ```
 <VirtualHost *:80>
     ServerName 18.221.185.248
     ServerAdmin admin@18.221.185.248
@@ -119,8 +119,8 @@ Create config file using Apache and mod_wsgi
 </VirtualHost>
 ```
 Configure Flask app with WSGI by adding following file and code
-`/var/www/store$ sudo nano store.wsgi`
-```
+- `/var/www/store$ sudo nano store.wsgi`
+- ```
 import sys
 import logging
 logging.basicConfig(stream=stderr)
@@ -135,11 +135,11 @@ application.config['SQLALCHEMY_DATABASE_URI'] = (
 ```
 
 Start and restart server
-`sudo a2ensite store`
-`sudo service apache2 reload`
+- `sudo a2ensite store`
+- `sudo service apache2 reload`
 
 Check for server errors...
-`sudo cat /var/log/apache2/error.log`
+- `sudo cat /var/log/apache2/error.log`
 
 ## Gotchas
 - Make sure to move `app.secret` and `app.config` out of `if __name__ == '__main__'` because this if clause is not evaluated in WSGI app
