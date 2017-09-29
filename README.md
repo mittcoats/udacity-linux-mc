@@ -152,6 +152,8 @@ Check for server errors...
 ## Sources
 - https://www.phusionpassenger.com/library/walkthroughs/deploy/python/ownserver/apache/enterprise/xenial/deploy_app.html
 - https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+- https://www.namecheap.com/support/knowledgebase/article.aspx/782/10/how-do-i-set-my-domain-to-use-namecheap-basicdns
+- http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/domain-transfer-to-route-53.html
 - https://github.com/aviaryan/flask-postgres-apache-server
 - https://github.com/kongling893/Linux-Server-Configuration-UDACITY
 - https://github.com/sharkwhistle/Udacity-FSND-Linux-Server-Configuration
