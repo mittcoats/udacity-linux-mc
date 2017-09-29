@@ -3,7 +3,7 @@ This file describes how to configure a Flask App on a Ubuntu machine, hosted on 
 
 ## Overview
 ### Server info
-__IP:__ [18.221.185.248]
+__IP:__ [13.58.80.139]
 
 __URL:__ [udacity-linux-link]
 
