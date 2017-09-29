@@ -104,7 +104,7 @@ Create new directory for store app and clone git repo
 
 Create config file using Apache and mod_wsgi
 - `sudo nano /etc/apache2/sites-available/store.conf`
-- ```
+```
 <VirtualHost *:80>
     ServerName 18.221.185.248
     ServerAdmin admin@18.221.185.248
@@ -118,9 +118,10 @@ Create config file using Apache and mod_wsgi
     ErrorLog ${APACHE_LOG_DIR}/error.log
 </VirtualHost>
 ```
+
 Configure Flask app with WSGI by adding following file and code
 - `/var/www/store$ sudo nano store.wsgi`
-- ```
+```
 import sys
 import logging
 logging.basicConfig(stream=stderr)
