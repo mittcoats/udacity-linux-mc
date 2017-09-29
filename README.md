@@ -156,4 +156,4 @@ Check for server errors...
 - https://github.com/kongling893/Linux-Server-Configuration-UDACITY
 - https://github.com/sharkwhistle/Udacity-FSND-Linux-Server-Configuration
 
-[udacity-linux-link]: http://www.udacity-linux.mittcoats.com
+[udacity-linux-link]: http://udacity-linux.mittcoats.com
